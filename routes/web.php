@@ -14,11 +14,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('Home');
+    return view('Home', [
+        "title" => "Home"
+    ]);
 });
 
 Route::get('/about', function () {
     return view('about', [
+        "title" => "About",
         "name" => "Dedy Putra Aditia",
         "email" => "dedyputraaditia1207@gmail.com",
         "image" => "naruto.jpg"
@@ -27,5 +30,7 @@ Route::get('/about', function () {
 
 
 Route::get('/blog', function () {
-    return view('blog');
+    return view('blog', [
+        "title" => "Blog"
+    ]);
 });
