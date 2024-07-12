@@ -30,7 +30,39 @@ Route::get('/about', function () {
 
 
 Route::get('/blog', function () {
+
+    $blog = [
+
+        [
+            "title" => "Judul semangat",
+            "author" => "dedy",
+            "body" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error quis beatae reprehenderit quasi. 
+            Quas, non ea dolore accusamus delectus recusandae quaerat nisi similique eligendi labore maxime provident obcaecati, 
+            laborum quam ratione cumque placeat commodi praesentium molestiae incidunt officiis numquam nostrum repellendus error.
+             Molestiae, soluta deleniti! Animi excepturi accusantium, optio architecto porro quia, 
+            deleniti saepe quo impedit error praesentium velit tenetur aperiam voluptatum earum, 
+            nemo voluptates expedita reiciendis quos repellendus consectetur natus minus similique? 
+            Nemo quidem omnis maiores nostrum dicta expedita ea animi in deleniti adipisci beatae quasi aspernatur sed eaque ut et doloremque voluptatum, aliquid neque. Odio porro enim nam."
+        ],
+
+        [
+            "title" => "Judul semangat 2",
+            "author" => "Purnomo",
+            "body" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error quis beatae reprehenderit quasi. 
+            Quas, non ea dolore accusamus delectus recusandae quaerat nisi similique eligendi labore maxime provident obcaecati, 
+            laborum quam ratione cumque placeat commodi praesentium molestiae incidunt officiis numquam nostrum repellendus error.
+             Molestiae, soluta deleniti! Animi excepturi accusantium, optio architecto porro quia, 
+            deleniti saepe quo impedit error praesentium velit tenetur aperiam voluptatum earum, 
+            nemo voluptates expedita reiciendis quos repellendus consectetur natus minus similique? 
+            Nemo quidem omnis maiores nostrum dicta expedita ea animi in deleniti adipisci beatae quasi aspernatur sed eaque ut et doloremque voluptatum, aliquid neque. Odio porro enim nam."
+        ],
+
+
+    ];
+
     return view('blog', [
-        "title" => "Blog"
+        "title" => "Blog",
+        "blog" => $blog
+
     ]);
 });
