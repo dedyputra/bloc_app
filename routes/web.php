@@ -18,7 +18,11 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return view('about');
+    return view('about', [
+        "name" => "Dedy Putra Aditia",
+        "email" => "dedyputraaditia1207@gmail.com",
+        "image" => "naruto.jpg"
+    ]);
 });
 
 
