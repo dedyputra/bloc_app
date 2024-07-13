@@ -35,6 +35,7 @@ Route::get('/blog', function () {
 
         [
             "title" => "Judul semangat",
+            "slug" => "judul-awal",
             "author" => "dedy",
             "body" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error quis beatae reprehenderit quasi. 
             Quas, non ea dolore accusamus delectus recusandae quaerat nisi similique eligendi labore maxime provident obcaecati, 
@@ -47,6 +48,7 @@ Route::get('/blog', function () {
 
         [
             "title" => "Judul semangat 2",
+            "slug" => "judul-akhir",
             "author" => "Purnomo",
             "body" => "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error quis beatae reprehenderit quasi. 
             Quas, non ea dolore accusamus delectus recusandae quaerat nisi similique eligendi labore maxime provident obcaecati, 
@@ -66,3 +68,14 @@ Route::get('/blog', function () {
 
     ]);
 });
+
+
+// Halaman single blog
+Route::get('blog/{slug}', function ($slug) {
+    return view('blog', [
+        "title" => "Single Blogg"
+
+    ]);
+});
+
+//End Halaman Single blog
